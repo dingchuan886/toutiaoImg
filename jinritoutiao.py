@@ -13,7 +13,7 @@ import warnings
 from config import *
 from multiprocessing import Pool
 
-client = pymongo.MongoClient(host=MONGO_URL, port=MONGO_PORT)
+client = pymongo.MongoClient(host=MONGO_URL, port=MONGO_PORT, connect=False)
 db = client[MONGO_DB]
 warnings.filterwarnings('ignore')
 
